@@ -2,15 +2,16 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: .9em;
+  /* font-size: 1em; */
   /* line-height: 1.1em; */
 }
 
 code {
-  font-size: 1.2em;
+  font-size: 20px;
   border-radius: 5px;
   /* border: solid black 1px; */
 }
+
 .main-container {
   width: 1200px;
   margin: 100px auto 100px auto;
@@ -35,9 +36,8 @@ code {
 }
 
 .brief-about .contact i {
-  margin-top: 10px;
-  font-size: 1.5em;
-  padding: 0 10px 0 0;
+  font-size: 24px;
+  margin: 10px 10px 0 0;
 }
 
 .brief-about .contact i:hover {
@@ -49,8 +49,14 @@ code {
   padding: 0;
 }
 
+.brief-about .btn-chevron {
+  display: none;
+}
+
 .subscribe li {
   font-weight: 700;
+  margin: 10px 0;
+  font-size: 16px;
 }
 
 .subscribe li i {
@@ -67,25 +73,91 @@ code {
 .content .blog-brief {
   padding-left: 50px;
   padding-right: 50px;
+  color: #272727;
 }
 
 .content .blog-brief .heading{
   text-decoration: none;
-  color: #272727;
+
 }
 
 .content .blog-brief .timestamp{
   text-decoration: none;
-  color: #272727;
   /* font-style: italic; */
 }
 
 .content .blog-brief .brief{
   text-decoration: none;
-  color: #272727;
 }
 
 .content .page {
   padding-left: 50px;
   padding-right: 50px;
+}
+
+@media only screen and (max-width: 980px) {
+  .main-container {
+    width: auto;
+    margin: 0;
+    padding: 50px;
+    /* border: solid 2px pink; */
+  }
+
+  .main-container .brief-about {
+    width: auto;
+    margin: 0 auto 50px auto;
+    position: static;
+    border-right: none;
+    border-bottom: solid 2px #1E90FF;
+    padding: 20px;
+    float:none;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .brief-about .name {
+    margin: 5px;
+  }
+
+  .brief-about .btn-chevron {
+    text-align: center;
+    color: #1E90FF;
+  }
+
+  .brief-about #expand-brief {
+    display: block;
+  }
+
+  .brief-about #contract-brief {
+    display: none;
+  }
+
+  .brief-about .contact {
+    display: none;
+  }
+
+  .brief-about .brief {
+    display: none;
+  }
+
+  .brief-about .subscribe {
+    display: none;
+  }
+
+  .brief-about .contact i {
+    font-size: 24px;
+    margin: 16px 16px 0 0;
+  }
+
+  .main-container .content {
+    font-size: 24px;
+    margin: auto;
+    /* width: 100px; */
+    /* border: solid 2px #272727; */
+  }
+
+  .content .page {
+    margin: 0;
+    padding: 0;
+  }
 }

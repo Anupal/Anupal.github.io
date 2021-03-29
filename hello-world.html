@@ -14,6 +14,7 @@
     <div class="main-container">
       <div class="brief-about">
         <a href="index.html"><h1 class="name">Anupal Mishra</h1></a>
+        <div id="expand-brief" class="btn-chevron"><i class="fas fa-chevron-down"></i></div>
         <p class="brief">Hello, I am a software and networking enthusiast. Here you'll find blogs on my escapades in TCP/IP networking and scripting. I currently work as a Software Engineer with Cisco.</p>
         <div class="contact">
           <i class="fas fa-envelope"></i>
@@ -21,9 +22,16 @@
           <i class="fab fa-github"></i>
         </div>
         <ul class="subscribe">
-          <li><i class="fas fa-rss"></i>Subscribe in a reader</li>
-          <li><i class="fas fa-envelope"></i>Subscribe via email</li>
+          <li>
+            <i class="fas fa-rss"></i>
+            <span>Subscribe in a reader</span>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <span>Subscribe via email</span>
+          </li>
         </ul>
+        <div id="contract-brief" class="btn-chevron"><i class="fas fa-chevron-up"></i></div>
       </div>
       <div class="content">
         
@@ -53,6 +61,26 @@ while True:
 
       </div>
     </div>
-
+    <script>
+      let divContact = document.getElementsByClassName("contact")[0];
+      let divBrief = document.getElementsByClassName("brief")[0];
+      let divSubscribe = document.getElementsByClassName("subscribe")[0];
+      let btnExpand = document.getElementById("expand-brief");
+      let btnContract = document.getElementById("contract-brief");
+      btnExpand.onclick = function() {
+        divContact.style.display = "block";
+        divBrief.style.display = "block";
+        divSubscribe.style.display = "block";
+        this.style.display = "none";
+        btnContract.style.display = "block";
+      };
+      btnContract.onclick = function() {
+        divContact.style.display = "none";
+        divBrief.style.display = "none";
+        divSubscribe.style.display = "none";
+        this.style.display = "none";
+        btnExpand.style.display = "block";
+      };
+    </script>
   </body>
 </html>
