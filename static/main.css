@@ -1,165 +1,145 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
 
 body {
+  padding: 0;
+  margin: 0;
+  text-size-adjust: none;
+  font-size: 16px;
   font-family: 'Open Sans', sans-serif;
-  /* font-size: 1em; */
-  /* line-height: 1.1em; */
 }
-
-code {
-  font-size: 20px;
-  border-radius: 5px;
-}
-
 .main-container {
-  width: 1200px;
-  margin: 100px auto 100px auto;
+
 }
 
-.main-container .brief-about {
-  width: 250px;
-  border-right: solid 2px #1E90FF;
+.main-container .nav-bar {
   position: fixed;
-  padding: 20px;
+  bottom: 0;
+  width: 100%;
+  height: auto;
   z-index: 2;
-  float: left;
+  box-shadow: 0 -2px 4px #e3e3e3;
+  /* border-top: solid 5px #1E90FF; */
+  border-radius: 12px 12px 0 0;
+  padding: 0;
+  background-color: white;
 }
 
-.brief-about h1 {
-  color: #1E90FF;
-}
-
-.brief-about a {
-  text-decoration: none;
-}
-
-.brief-about .contact i {
-  font-size: 32px;
-  margin: 10px 10px 0 0;
-}
-
-.brief-about .contact i:hover {
-  color: #1E90FF;
-}
-.brief-about .subscribe {
-  list-style-type: none;
-  margin: 20px 0;
+.main-container .nav-bar .item {
+  font-size: 20px;
+  display: block;
+  margin: 15px 30px;
   padding: 0;
 }
 
-.brief-about .btn-chevron {
-  display: none;
+.main-container .nav-bar .heading {
+  float: left;
+  color: #1E90FF;
+  font-weight: 700;
 }
 
-.subscribe li {
-  font-weight: 700;
-  margin: 10px 0;
+.main-container .nav-bar #toggle {
+  color: #939393;
+  float: right;
+}
+
+.main-container .nav-bar .about {
+  font-size: 16px;
+  float: left;
+}
+
+.main-container .nav-bar .brief {
   font-size: 16px;
 }
 
-.subscribe li i {
-  margin: 0 10px 0 0;
+.main-container .nav-bar .contact {
+  font-size: 30px;
+  margin-top: 15px;
 }
-.subscribe li:hover {
+
+.main-container .nav-bar .contact .icon {
+  margin-right: 10px;
+}
+
+.main-container .nav-bar .contact .icon:hover {
   color: #1E90FF;
 }
+
+.main-container .nav-bar .subscribe {
+  margin-top: 25px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.main-container .nav-bar .subscribe-item {
+  margin-top: 5px;
+}
+
 .main-container .content {
-  margin-left: 290px;
+  margin-bottom: 80px;
 }
 
-.content .blog-brief {
-  padding-left: 50px;
-  padding-right: 50px;
-  color: #272727;
+.main-container .content .item {
+  margin: 15px 30px;
 }
 
-.content .blog-brief .heading{
+.main-container .content .item {
+  margin: 15px 30px;
+}
+
+.main-container .content .blog-brief {
+
+}
+
+.main-container .content .heading {
   text-decoration: none;
-
+  color: #1E90FF;
 }
 
-.content .blog-brief .timestamp{
-  text-decoration: none;
-  /* font-style: italic; */
+.main-container .content .timestamp {
+  color: #939393;
+  font-weight: 600;
+}
+.main-container .content .page {
+  margin: 15px 30px;
 }
 
-.content .blog-brief .brief{
-  text-decoration: none;
+.main-container .content .page code {
+  /* border-radius: 15px; */
+  border: 2px solid #939393;
 }
 
-.content .page {
-  padding-left: 50px;
-  padding-right: 50px;
-}
+@media only screen and (min-width: 1200px) {
 
-@media only screen and (max-width: 980px) {
   .main-container {
-    width: auto;
-    margin: 0;
-    padding: 50px;
+    width: 1200px;
+    height: auto;
+    margin: 100px auto;
   }
 
-  .main-container .brief-about {
-    width: auto;
-    margin: 0 auto 50px auto;
-    position: static;
-    border-right: none;
-    border-bottom: solid 5px #1E90FF;
-    padding: 20px;
-    float:none;
-    font-size: 24px;
-    text-align: center;
+  .main-container .nav-bar {
+    position: fixed;
+    bottom: auto;
+    left: auto;
+    width: 300px;
+    height: auto;
+    z-index: 2;
+    float: left;
+    box-shadow: none;
+    border-right: solid 2px #1E90FF;
+    border-radius: 0;
+    padding: 0;
+    background-color: white;
   }
 
-  .brief-about .name {
-    margin: 5px;
-  }
-
-  .brief-about .btn-chevron {
-    text-align: center;
-    color: #1E90FF;
-  }
-
-  .brief-about #expand-brief {
+  .main-container .nav-bar .about {
     display: block;
   }
 
-  .brief-about #contract-brief {
+  #toggle {
     display: none;
-  }
-
-  .brief-about .contact {
-    display: none;
-  }
-
-  .brief-about .brief {
-    display: none;
-  }
-
-  .brief-about .subscribe {
-    display: none;
-  }
-
-  .brief-about .contact i {
-    font-size: 32px;
-    width: 50px;
-    height: 50px;
-    margin: 10px 10px 0 0;
-  }
-  .subscribe li i {
-    width: 40px;
-    height: 40px;
-    margin: 0 10px 0 0;
   }
 
   .main-container .content {
-    font-size: 24px;
-    margin: auto;
-    /* width: 100px; */
-  }
-
-  .content .page {
-    margin: 0;
-    padding: 0;
+    margin-left: 320px;
   }
 }

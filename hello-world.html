@@ -2,43 +2,45 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/eada9d1308.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="static/github-gist.min.css"> -->
-    <link rel="stylesheet" href="static/atom-one-dark.min.css">
+    <link rel="stylesheet" href="static/atom-one-light.min.css">
     <script src="static/highlight.pack.js"></script>
     <script>hljs.highlightAll();</script>
+    <title>Anupal Mishra</title>
     <link rel="stylesheet" href="static/main.css">
-    <title></title>
   </head>
   <body>
     <div class="main-container">
-      <div class="brief-about">
-        <a href="index.html"><h1 class="name">Anupal Mishra</h1></a>
-        <div id="expand-brief" class="btn-chevron"><i class="fas fa-chevron-down"></i></div>
-        <p class="brief">Hello, I am a software and networking enthusiast. Here you'll find blogs on my escapades in TCP/IP networking and scripting. I currently work as a Software Engineer with Cisco.</p>
-        <div class="contact">
-          <i class="fas fa-envelope"></i>
-          <i class="fab fa-linkedin"></i>
-          <i class="fab fa-github"></i>
+      <div class="nav-bar">
+        <span class="item heading">Anupal Mishra</span>
+        <div class="item"><span id="toggle" class="fas fa-chevron-up"></span></div>
+        <div class="item about" >
+          <!-- style="display: none;" -->
+          <span class="brief">Hello, I am a software and networking enthusiast. Here you'll find blogs on my escapades in TCP/spanP networking and scripting. I currently work as a Software Engineer with Cisco.</span>
+          <div class="contact">
+            <span class="fas fa-envelope icon"></span>
+            <span class="fab fa-linkedin icon"></span>
+            <span class="fab fa-github icon"></span>
+          </div>
+          <div class="subscribe">
+            <div class="subscribe-item">
+              <span class="fas fa-rss"></span>
+              <span>Subscribe in a reader</span>
+            </div>
+            <div class="subscribe-item">
+              <span class="fas fa-envelope"></span>
+              <span>Subscribe via email</span>
+            </div>
+          </div>
         </div>
-        <ul class="subscribe">
-          <li>
-            <i class="fas fa-rss"></i>
-            <span>Subscribe in a reader</span>
-          </li>
-          <li>
-            <i class="fas fa-envelope"></i>
-            <span>Subscribe via email</span>
-          </li>
-        </ul>
-        <div id="contract-brief" class="btn-chevron"><i class="fas fa-chevron-up"></i></div>
       </div>
       <div class="content">
         
-  <div class="page">
-      <h1>Hello World!</h1>
-      <span>29 Mar 21</span>
-      <p><p>This blog has been a long time coming (Probably too long!). I have been meaning to share my learnings in networking and scripting but procrastination has been real. The website is still under work. I used <strong>Frozen-Flask Framework</strong> and it has been a breeze so far.</p>
+<div class="page">
+  <h2 class="heading">Hello World!</h2>
+  <span class="timestamp">29 Mar 21</span>
+  <p>This blog has been a long time coming (Probably too long!). I have been meaning to share my learnings in networking and scripting but procrastination has been real. The website is still under work. I used <strong>Frozen-Flask Framework</strong> and it has been a breeze so far.</p>
 <h3>What's left</h3>
 <ul>
 <li>[x] CSS for demo code</li>
@@ -55,31 +57,24 @@
 a = 5
 a += 4
 while True:
-  a += 1</code></pre><p>
-      <strong>-Anupal Mishra</strong>
-  </div>
+  a += 1</code></pre>
+  <strong>-Anupal Mishra</strong>
+</div>
 
       </div>
     </div>
+
     <script>
-      let divContact = document.getElementsByClassName("contact")[0];
-      let divBrief = document.getElementsByClassName("brief")[0];
-      let divSubscribe = document.getElementsByClassName("subscribe")[0];
-      let btnExpand = document.getElementById("expand-brief");
-      let btnContract = document.getElementById("contract-brief");
-      btnExpand.onclick = function() {
-        divContact.style.display = "block";
-        divBrief.style.display = "block";
-        divSubscribe.style.display = "block";
-        this.style.display = "none";
-        btnContract.style.display = "block";
-      };
-      btnContract.onclick = function() {
-        divContact.style.display = "none";
-        divBrief.style.display = "none";
-        divSubscribe.style.display = "none";
-        this.style.display = "none";
-        btnExpand.style.display = "block";
+      let divAbout = document.getElementsByClassName("about")[0];
+      let btnToggle = document.getElementById("toggle");
+      btnToggle.onclick = function() {
+        if (divAbout.style.display == "none" ) {
+          divAbout.style.display = "block";
+          btnToggle.className = btnToggle.className.replace("fa-chevron-up","fa-chevron-down");
+        } else {
+          divAbout.style.display = "none";
+          btnToggle.className = btnToggle.className.replace("fa-chevron-down","fa-chevron-up");
+        }
       };
     </script>
   </body>
