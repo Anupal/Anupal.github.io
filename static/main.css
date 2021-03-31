@@ -92,8 +92,11 @@ body {
   margin: 15px 30px;
 }
 
-.main-container .content .blog-brief {
-
+.main-container .content .blog-brief .read-more {
+  text-decoration: none;
+  font-size: 14px;
+  font-style: italic;
+  color: #0076e1;
 }
 
 .main-container .content .heading {
